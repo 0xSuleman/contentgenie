@@ -1,0 +1,37 @@
+{
+	"background_music": {
+		"inputs": {
+			"parameters": ["url", "volume_percentage"],
+			"actions":["loop_background_music"]
+		},
+		"type": "audio",
+		"z": -1,
+		"parameters": {
+			"url": null
+		},
+		"actions": [
+			{
+				"type": "loop_background_music",
+				"param": {
+					"duration": null
+				}
+			},
+			{
+				"type":"normalize_audio",
+				"param":{}
+			},
+			{
+				"type": "audio_fade_in",
+				"param": 0.8
+			},
+			{
+				"type": "audio_fade_out",
+				"param": 1.4
+			},
+			{
+				"type": "volume_percentage",
+				"param": null
+			}
+		]
+	}
+}

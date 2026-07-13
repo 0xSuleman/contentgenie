@@ -1,0 +1,40 @@
+---
+title: ApiKeyManager in ContentGenie
+sidebar_label: ApiKeyManager
+---
+
+# ApiKeyManager in ContentGenie
+
+ApiKeyManager stores provider settings in the local database and falls back to environment variables.
+
+## Importing ApiKeyManager
+
+```python
+from contentgenie.config.api_db import ApiKeyManager, ApiProvider
+```
+
+## set_api_key
+
+```python
+ApiKeyManager.set_api_key(ApiProvider.GEMINI, "your_gemini_key")
+ApiKeyManager.set_api_key(ApiProvider.IMAGE_PROVIDER, "zimage_local")
+ApiKeyManager.set_api_key("YOUTUBE_API_KEY", "your_optional_youtube_data_key")
+```
+
+## get_api_key
+
+```python
+gemini_key = ApiKeyManager.get_api_key(ApiProvider.GEMINI)
+image_provider = ApiKeyManager.get_api_key(ApiProvider.IMAGE_PROVIDER)
+youtube_key = ApiKeyManager.get_api_key("YOUTUBE_API_KEY")
+```
+
+String keys are also supported:
+
+```python
+ApiKeyManager.set_api_key("GEMINI_API_KEY", "your_gemini_key")
+gemini_key = ApiKeyManager.get_api_key("GEMINI_API_KEY")
+```
+
+The YouTube Data API key is optional. Licensed-gameplay discovery falls back to
+slower per-video Creative Commons metadata verification when it is not configured.

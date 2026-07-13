@@ -1,0 +1,39 @@
+---
+title: ContentGenie Hello World Example
+sidebar_label: ContentGenie Hello World Example
+---
+
+# ContentGenie Hello World Example
+
+This guide shows how to generate a facts short with Gemini for text, EdgeTTS for voice, and the configured image provider for image overlays.
+
+```python
+from contentgenie.audio.edge_voice_module import EdgeTTSVoiceModule
+from contentgenie.config.api_db import ApiKeyManager, ApiProvider
+from contentgenie.config.asset_db import AssetDatabase, AssetType
+from contentgenie.config.languages import EDGE_TTS_VOICENAME_MAPPING, Language
+from contentgenie.engine.facts_short_engine import FactsShortEngine
+
+ApiKeyManager.set_api_key(ApiProvider.GEMINI, "your_gemini_key")
+ApiKeyManager.set_api_key(ApiProvider.IMAGE_PROVIDER, "pollinations")
+
+AssetDatabase.add_remote_asset("minecraft background cube", AssetType.BACKGROUND_VIDEO, "https://www.youtube.com/watch?v=Pt5_GSKIWQM")
+AssetDatabase.add_remote_asset("chill music", AssetType.BACKGROUND_MUSIC, "https://www.youtube.com/watch?v=uUu1NcSHg2E")
+
+voice_name = EDGE_TTS_VOICENAME_MAPPING[Language.GERMAN]["male"]
+voice_module = EdgeTTSVoiceModule(voice_name)
+
+content_engine = FactsShortEngine(
+    voiceModule=voice_module,
+    facts_type="Interesting scientific facts from the 19th century",
+    background_video_name="minecraft background cube",
+    background_music_name="chill music",
+    num_images=5,
+    language=Language.GERMAN,
+)
+
+for step_num, step_logs in content_engine.makeContent():
+    print(step_logs)
+
+print(content_engine.get_video_output_path())
+```

@@ -1,0 +1,30 @@
+{
+  "sources": [
+    {
+      "name": "Kenney Impact Sounds",
+      "url": "https://kenney.nl/assets/impact-sounds",
+      "license": "Creative Commons CC0",
+      "local_archive": "assets/sfx/source_packs/kenney_impact-sounds.zip"
+    },
+    {
+      "name": "100 CC0 SFX #2",
+      "url": "https://opengameart.org/content/100-cc0-sfx-2",
+      "license": "CC0",
+      "local_archive": "assets/sfx/source_packs/opengameart_sfx_100_v2.zip"
+    }
+  ],
+  "library": {
+    "riser": ["riser_air_01.ogg"],
+    "whoosh": ["whoosh_air_02.ogg"],
+    "impact": ["impact_hit_01.ogg", "pop_light_01.ogg"],
+    "hit": ["impact_hit_01.ogg", "pop_light_01.ogg"],
+    "reveal": ["reveal_bell_01.ogg", "pop_light_01.ogg"],
+    "suspense": ["suspense_ambient_02.ogg"],
+    "door": ["door_01.ogg"],
+    "lock": ["lock_open_01.ogg"],
+    "glass": ["glass_01.ogg"],
+    "metal": ["metal_hit_01.ogg"],
+    "thunder": ["thunder_01.ogg"],
+    "footstep": ["footstep_wood_01.ogg"]
+  }
+}

@@ -1,0 +1,12 @@
+.git
+.venv
+.logs
+.editing_assets
+.hf_cache
+.hf_models
+videos
+frontend/node_modules
+frontend/.next
+frontend/out
+**/__pycache__
+*.pyc

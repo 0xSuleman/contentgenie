@@ -1,0 +1,53 @@
+{
+	"top_image_1": {
+		"type": "image",
+		"inputs":{
+			"parameters": ["url"],
+			"actions": ["set_time_start", "set_time_end", "auto_resize_image", "normalize_image", "ken_burns", "screen_position"]
+		},
+		"z": 5,
+		"parameters": {
+			"url": null
+		},
+		"actions": [
+			{
+				"type": "set_time_start",
+				"param": null
+			},
+			{
+				"type": "set_time_end",
+				"param": null
+			},
+			{
+				"type": "auto_resize_image",
+				"param":{
+					"maxWidth": 690,
+					"maxHeight": 690
+				}
+			},
+			{
+				"type": "normalize_image",
+				"param":{
+					"maxWidth": 690,
+					"maxHeight": 690
+				}
+			},
+			{
+				"type": "ken_burns",
+				"param": {
+					"start": 1.0,
+					"end": 1.06
+				}
+			},
+			{
+				"type": "screen_position",
+				"param": {
+					"pos": [
+						"center",
+						50
+					]
+				}
+			}
+		]
+	}
+}

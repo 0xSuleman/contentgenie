@@ -1,0 +1,102 @@
+---
+title: Step-by-Step Guide to Installing ContentGenie
+sidebar_label: Installation Guide
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Launching Your ContentGenie Experience
+
+This guide will walk you through the process of setting up your machine to run the **ContentGenie** library. The setup requires one  component: FFmpeg. Follow the steps below to get these dependencies installed.
+
+## Before You Begin
+
+Make sure you have the following installed on your machine:
+
+- Python 3.x
+- Pip (Python package installer)
+
+## Installation Process
+
+Here are the steps to install FFmpeg, and the ContentGenie library.
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+
+After downloading, follow the installation instructions provided on the website.
+
+### Step 1: Install FFmpeg (Essential for ContentGenie)
+
+FFmpeg is another key component for ContentGenie. Download the FFmpeg binaries from the link below:
+
+> **[👉 Download FFmpeg Here (click on 
+FFmpeg_Full.msi ) 👈](https://github.com/icedterminal/ffmpeg-installer/releases/tag/6.0.0.20230306)**
+
+The download will include ffmpeg and ffprobe and will add it to your path. Follow the installation instructions as guided.
+<details open>
+<summary><b>Step 3: Install ContentGenie Library</b></summary>
+
+- Open a terminal or command prompt.
+- Execute the following command:
+
+```bash
+pip install --upgrade ContentGenie
+```
+
+</details>
+
+  </TabItem>
+
+  <TabItem value="mac" label="macOS">
+
+
+
+### Step 1: Install FFmpeg (Essential for ContentGenie)
+
+Run the command below in your command line:
+
+```bash
+brew install ffmpeg
+```
+
+<details open>
+<summary><b>Step 3: Install ContentGenie Library</b></summary>
+
+- Open a terminal or command prompt.
+- Execute the following command:
+
+```bash
+pip install --upgrade ContentGenie
+```
+
+</details>
+
+  </TabItem>
+
+  <TabItem value="ubuntu" label="Ubuntu/Debian-based systems">
+
+
+### Step 1: Install FFmpeg
+
+Execute the following command:
+
+```bash
+sudo apt-get install ffmpeg
+```
+
+<details open>
+<summary><b>Step 3: Install ContentGenie Library</b></summary>
+
+- Open a terminal or command prompt.
+- Execute the following command:
+
+```bash
+pip install --upgrade ContentGenie
+```
+
+</details>
+
+  </TabItem>
+</Tabs>
+
+And there you have it! Your machine is now ready to run ContentGenie. Dive into the world of automated video content creation with ContentGenie!
