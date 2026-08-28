@@ -1,5 +1,7 @@
 # ContentGenie
 
+> **Provenance:** ContentGenie is downstream engineering based on [ShortGPT](https://github.com/RayVentura/ShortGPT) by Ray Ventura. The upstream MIT copyright is preserved. See [ATTRIBUTION.md](ATTRIBUTION.md) for the contribution boundary used by this portfolio.
+
 ContentGenie is a production-focused workspace for creating original YouTube Shorts with researched scripts, editorial review, voiceover, word-timed captions, generated visuals, sound design, licensed gameplay automation, and encoded-file quality checks.
 
 ## Run Locally
